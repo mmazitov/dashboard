@@ -1,0 +1,93 @@
+@use "./fonts" as *;
+
+/*
+	Updated SCSS variables file that includes:
+  - A color-scheme declaration to support both light and dark modes.
+  - A media query to automatically switch to dark theme variables when the user prefers dark mode.
+  - A manual override via the .dark-theme class.
+*/
+
+:root {
+	/* Light theme variables */
+	--color-primary: #222531;
+	--color-secondary: #616e85;
+	--color-tertiary: #eff2f5;
+	--color-fourth: #fff;
+	--color-fourth-rgb: 255, 255, 255;
+	--color-fifth: #f18c5c;
+	--color-sixth: #4c57fb;
+	--color-seventh: #000;
+	--color-eighth: #5155c3;
+	--color-ninth: #597dbe;
+	--color-tenth: #5f99bb;
+	--color-eleventh: #65b8b7;
+	--color-twelfth: #6cddb1;
+	--color-thirteenth: #d9d9d9;
+	--color-fourteenth: #d0d6e4;
+	--color-fifteenth: #ecedff;
+
+	/* Inform the browser that both light and dark color schemes are available */
+	color-scheme: light dark;
+}
+
+/* Automatically apply dark theme variables for users who prefer dark mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-primary: #ebebeb;
+		--color-primary-rgb: 235, 235, 235;
+		--color-secondary: #2b3a42;
+		--color-secondary-rgb: 43, 58, 66;
+		--color-tertiary: #1f282e;
+		--color-tertiary-rgb: 31, 40, 46;
+		--color-fourth: #161d22;
+		--color-fourth-rgb: 22, 29, 34;
+		--color-fifth: #727272;
+		--color-sixth: #dcdcdc;
+		--color-seventh: #f78f1e;
+		--color-eighth: #292d32;
+		--color-ninth: #0d0d0d;
+		--color-ninth-rgb: 13, 13, 13;
+		--color-tenth: #8fa3ad;
+		--color-eleventh: #1a1a1a;
+		--color-twelfth: #21252b;
+		--color-twelfth-rgb: 33, 37, 43;
+	}
+}
+
+/* Option for a manual dark theme override */
+.dark-theme {
+	--color-primary: #ebebeb;
+	--color-primary-rgb: 235, 235, 235;
+	--color-secondary: #2b3a42;
+	--color-secondary-rgb: 43, 58, 66;
+	--color-tertiary: #1f282e;
+	--color-tertiary-rgb: 31, 40, 46;
+	--color-fourth: #161d22;
+	--color-fourth-rgb: 22, 29, 34;
+	--color-fifth: #727272;
+	--color-sixth: #dcdcdc;
+	--color-seventh: #f78f1e;
+	--color-eighth: #292d32;
+	--color-ninth: #0d0d0d;
+	--color-ninth-rgb: 13, 13, 13;
+	--color-tenth: #8fa3ad;
+	--color-eleventh: #1a1a1a;
+	--color-twelfth: #21252b;
+	--color-twelfth-rgb: 33, 37, 43;
+}
+
+$main-font: inter;
+
+// Font size
+$fs-xs: 12;
+$fs-sm: 14;
+$fs-md: 16;
+$fs-lg: 20;
+$fs-xlg: 32;
+
+$border-radius: 16px;
+$border-radius-second: 72px;
+$border-radius-third: 40px;
+
+$box-shadow: 0 8px 24px 0;
+$box-shadow-color: rgb(81 85 195 / 8%);

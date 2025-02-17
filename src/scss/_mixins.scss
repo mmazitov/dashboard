@@ -1,0 +1,27 @@
+@use "sass:meta";
+@use "sass:list";
+
+@mixin transition($properties: all, $duration: 0.5s, $timing-function: ease-in-out, $delay: 0s) {
+	$transitions: ();
+
+	@if meta.type-of($properties) == "List" {
+		@each $property in $properties {
+			$transitions: list.append($transitions, $property $duration $timing-function $delay);
+		}
+	} @else {
+		$transitions: $properties $duration $timing-function $delay;
+	}
+
+	transition: $transitions;
+}
+
+/* stylelint-disable rule-empty-line-before */
+@mixin font($font-size-px, $line-height-px, $base-context: 16px) {
+	font-size: calc($font-size-px / $base-context) + rem;
+	line-height: calc($line-height-px / $font-size-px);
+}
+
+@mixin spacing($font-size, $percentage) {
+	$spacing: calc(($font-size * $percentage) / 100);
+	letter-spacing: $spacing;
+}

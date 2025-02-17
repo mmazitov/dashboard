@@ -1,0 +1,118 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./functions" as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $main-font;
+	font-size: to-rem($fs-md);
+	line-height: 1;
+	background: var(--color-fifteenth);
+	-webkit-font-smoothing: antialiased;
+}
+
+.container {
+	max-width: 1312px;
+	margin-inline: auto;
+	padding: 0 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 8px;
+	font-weight: 500;
+}
+
+h1 {
+	font-size: to-rem($fs-xlg);
+	font-weight: 700;
+}
+
+h2 {
+	font-size: to-rem($fs-lg);
+	font-weight: 700;
+}
+
+h3 {
+	font-size: to-rem($fs-md);
+}
+
+h4 {
+	font-size: to-rem($fs-sm);
+}
+
+h5 {
+	font-size: to-rem($fs-xs);
+}
+
+h6 {
+	font-size: to-rem($fs-xs);
+}
+
+p {
+	margin: 0 0 10px;
+	color: var(--color-secondary);
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+strong,
+b {
+	font-weight: 700;
+}
+
+a {
+	color: var(--color-primary);
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+ul,
+ol {
+	list-style-position: outside;
+	margin: 0 0 5px 5px;
+	padding: 0;
+	li {
+		margin: 0 0 5px;
+	}
+}
+
+blockquote {
+	margin: 0 0 5px;
+
+	// color: var(--color-secondary);
+
+	// border-left: $border-width solid var(--color-third);
+	font-style: italic;
+	padding-left: 5px;
+}
+
+code,
+pre {
+	padding: 2px 4px;
+	font-family: "Courier New", Courier, monospace;
+	font-size: to-rem($fs-sm);
+
+	// background-color: var(--color-secondary);
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+canvas {
+	width: 100%;
+}

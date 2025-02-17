@@ -1,0 +1,47 @@
+{
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.fixAll.stylelint": "explicit",
+		"source.organizeImports": "explicit"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+	},
+	"[pug]": {
+		"editor.defaultFormatter": "mrmlnc.vscode-pugbeautify"
+	},
+	"[prisma]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "Prisma.prisma"
+	},
+	"prettier.useTabs": true,
+	"prettier.tabWidth": 2,
+	"prettier.singleQuote": true,
+	"prettier.requireConfig": true,
+	"stylelint.validate": ["css", "scss"],
+	"stylelint.enable": true,
+	"stylelint.configFile": ".stylelintrc.js",
+	"prettier.configPath": ".prettierrc",
+	"files.autoSave": "onFocusChange"
+}

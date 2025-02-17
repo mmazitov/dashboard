@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<title>Dashboard</title>
+	<meta name="keywords" content="Some text" />
+	<meta name="description" content="Some description" />
+	<meta name="author" content="Some author" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- FAVICON-->
+	<link href="favicon.ico" rel="shortcut icon" />
+	<!-- CSS LINKS-->
+	<link href="css/all.css" rel="stylesheet" media="screen" />
+
+</head>
+
+<body>
+	<main class="dashboard" role="main">
+		<input type="radio" name="tabs" id="tab1" hidden />
+		<input type="radio" name="tabs" id="tab2" checked hidden />
+		<input type="radio" name="tabs" id="tab3" hidden />
+		<header class="dashboard__header">
+			<div class="container">
+				<div class="dashboard__title--holder">
+					<h1 class="dashboard__title">Dashboard intro title</h1>
+					<p class="dashboard__description">Ac vulputate purus semper fusce at. Non dolor in cras.</p>
+				</div>
+				<div class="dashboard__tabs--title">
+					<label for="tab1" class="dashboard__tab--title">
+						<svg width="16" height="16">
+							<use xlink:href="pic/sprite.svg#icon-bar-chart"></use>
+						</svg>
+						<span> Compare</span>
+					</label>
+					<label for="tab2" class="dashboard__tab--title">
+						<svg width="16" height="16">
+							<use xlink:href="pic/sprite.svg#icon-briefcase"></use>
+						</svg>
+						<span> Managers</span>
+					</label>
+					<label for="tab3" class="dashboard__tab--title">
+						<svg width="16" height="16">
+							<use xlink:href="pic/sprite.svg#icon-user"></use>
+						</svg>
+						<span>Employees</span>
+					</label>
+				</div>
+
+			</div>
+		</header>
+		<section class="dashboard__tabs--content">
+			<div class="container">
+				<section class="dashboard__tab--content">
+					<h2>Tab 1</h2>
+					<p>Content for tab 1</p>
+				</section>
+
+				<section class="dashboard__tab--content">
+					<section class="dashboard__charts">
+						<!-- RLQ Card -->
+						<article class="dashboard__card dashboard__card--small">
+							<div class="card__header">
+								<h2 class="card__title--uppercase card__title">RLQ</h2>
+								<span class="card__icon">
+									<svg width="16" height="16">
+										<use xlink:href="pic/sprite.svg#icon-info"></use>
+									</svg>
+								</span>
+								<span class="card__helper"> Help text </span>
+							</div>
+							<div class="card__content">
+								<canvas id="chart__area" height="144"></canvas>
+							</div>
+						</article>
+
+						<!-- KI Card -->
+						<article class="dashboard__card dashboard__card--small">
+							<div class="card__header">
+								<h2 class="card__title--uppercase card__title">KI</h2>
+								<span class="card__icon">
+									<svg width="16" height="16">
+										<use xlink:href="pic/sprite.svg#icon-info"></use>
+									</svg>
+								</span>
+								<span class="card__helper"> Help text </span>
+							</div>
+							<div class="card__content"></div>
+						</article>
+
+						<!-- MZI Card -->
+						<article class="dashboard__card dashboard__card--small">
+							<div class="card__header">
+								<h2 class="card__title--uppercase card__title">MZI</h2>
+								<span class="card__icon">
+									<svg width="16" height="16">
+										<use xlink:href="pic/sprite.svg#icon-info"></use>
+									</svg>
+								</span>
+								<span class="card__helper"> Help text </span>
+							</div>
+							<div class="card__content">
+								<canvas id="chart__doughnut--mzi" height="106"></canvas>
+							</div>
+						</article>
+
+						<!-- Survey Topics Card -->
+						<article class="dashboard__card--survey-topics dashboard__card dashboard__card--small">
+							<div class="card__header">
+								<h2 class="card__title--capitalize card__title">Survey Topics</h2>
+							</div>
+							<div class="card__content--list card__content">
+								<ul class="card__list">
+									<li class="card__list--item">
+										A. <a href="#" class="card__list--link"> Pulvinar iaculis placerat vitae dui</a>
+									</li>
+									<li class="card__list--item">
+										B. <a href="#" class="card__list--link"> Massa morbi mattis lectus ornare</a>
+									</li>
+									<li class="card__list--item">
+										C. <a href="#" class="card__list--link"> Diam sem vestibulum purus morbi</a>
+									</li>
+									<li class="card__list--item">
+										A. <a href="#" class="card__list--link"> Pulvinar iaculis placerat vitae dui</a>
+									</li>
+									<li class="card__list--item">
+										B. <a href="#" class="card__list--link"> Massa morbi mattis lectus ornare</a>
+									</li>
+									<li class="card__list--item">
+										C. <a href="#" class="card__list--link"> Diam sem vestibulum purus morbi</a>
+									</li>
+								</ul>
+							</div>
+						</article>
+
+						<!-- Survey Topics Scores - Large Card -->
+						<article class="dashboard__card dashboard__card--large">
+							<div class="card__header">
+								<h2 class="card__title--capitalize card__title">Survey Topics Scores</h2>
+								<span class="card__icon">
+									<svg width="16" height="16">
+										<use xlink:href="pic/sprite.svg#icon-info"></use>
+									</svg>
+								</span>
+								<span class="card__helper"> Help text </span>
+							</div>
+							<div class="card__content">
+								<canvas id="chart__bar--survey" height="156"></canvas>
+							</div>
+						</article>
+
+						<!-- KPs - Large Card -->
+						<article class="dashboard__card dashboard__card--large">
+							<div class="card__header">
+								<h2 class="card__title">KPs</h2>
+								<span class="card__icon">
+									<svg width="16" height="16">
+										<use xlink:href="pic/sprite.svg#icon-info"></use>
+									</svg>
+								</span>
+								<span class="card__helper"> Help textHelp textHelp textHelp textHelp textHelp text </span>
+							</div>
+							<div class="card__content">
+								<canvas id="chart__bar--kp" height="188"></canvas>
+							</div>
+						</article>
+
+					</section>
+				</section>
+
+				<section class="dashboard__tab--content">
+					<h2>Tab 3</h2>
+					<p>Content for tab 3</p>
+				</section>
+
+			</div>
+		</section>
+
+	</main>
+</body>
+<!--JavaScripts Links-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js
+"></script>
+<!--Scripts-->
+<script src="js/functions.js"></script>
+
+</html>

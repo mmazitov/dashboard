@@ -129,11 +129,17 @@ html {
 			grid-column: span 2;
 		}
 	}
-	&--ki {
+	&--ki,
+	&--mzi {
 		.card__content {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+		}
+	}
+	&--mzi {
+		.card__content {
+			left: 30px;
 		}
 	}
 }

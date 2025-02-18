@@ -1,19 +1,27 @@
-<h1 align="center">Reward Performance</h1>
+<h1 align="center">Chart.js Dashboard</h1>
 
 ## 🎯 About
 
-Reward Performance is a web-based application designed to facilitate employee recognition. The system enables users to recognize a colleague through intuitive forms that capture recipient details along with a personalized message.
+The Chart.js Dashboard is a web-based application designed to present data in a visually appealing and interactive manner. It leverages modern web technologies to create a responsive and user-friendly interface for displaying key performance indicators (KPIs) and other metrics.
+
+## Features
+
+- **Responsive Design**: Ensures compatibility across various devices and screen sizes.
+- **Interactive Charts**: Utilizes Chart.js for dynamic data visualization.
+- **Modular Components**: Easily customizable and reusable HTML components.
 
 ## 🛠 Tech Stack
 
 - [SCSS (styling)](https://sass-lang.com/)
 - [JavaScript (ES6+)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Chart.js](https://www.chartjs.org/)
+- [Chart.js annotations](https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/)
 - [Gulp (build system)](https://gulpjs.com/)
 - [ESLint](https://eslint.org/) & [Stylelint (code quality)](https://stylelint.io/)
 
 ## 📁 Project Structure
 
-- **/src/html/components/**: Contains reusable HTML components (e.g., header form, recognize form).
+- **/src/html/components/**: Contains reusable HTML components.
 - **/src/html/main/**: Main HTML files and script references.
 - **/gulpfile.js**: Contains Gulp task definitions for development and production builds.
 - **/package.json**: Lists project dependencies, scripts, and configuration settings.
@@ -24,14 +32,14 @@ Reward Performance is a web-based application designed to facilitate employee re
 ```
 Make sure you have the following tools installed:
 
-Node.js - v18.12.1 or higher (for running build tools if needed).
+Node.js - v18.19.1 or higher (for running build tools if needed).
 Sass (for compiling SCSS into CSS).
 
 # Clone this project
-$ git clone https://github.com/mmazitov/reward-repformance
+$ git clone https://github.com/mmazitov/dashboard
 
 # Access
-$ cd reward-repformance
+$ cd dashboard
 
 # Install the dependencies using Yarn or npm:
 $ $ yarn install or $ npm install

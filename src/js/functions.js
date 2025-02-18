@@ -60,6 +60,7 @@ const getRLQData = () => ({
 
 // Get options for RLQ chart
 const getRLQOptions = () => ({
+	responsive: false,
 	plugins: {
 		legend: { display: false },
 		annotation: {

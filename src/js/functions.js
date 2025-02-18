@@ -256,7 +256,7 @@ const getSurveyOptions = () => ({
 				font: { family: "Inter", size: 12 },
 				color: "rgba(97, 110, 133, 1)",
 				padding: 0,
-				callback: (value) => `${value} \u00A0\u00A0\u00A0`,
+				callback: (value) => `${value} \u00A0\u00A0`,
 			},
 			grid: { drawTicks: false },
 			border: { display: false },

@@ -9,6 +9,7 @@ The Chart.js Dashboard is a web-based application designed to present data in a 
 - **Responsive Design**: Ensures compatibility across various devices and screen sizes.
 - **Interactive Charts**: Utilizes Chart.js for dynamic data visualization.
 - **Modular Components**: Easily customizable and reusable HTML components.
+- **SVG sprites**
 
 ## 🛠 Tech Stack
 

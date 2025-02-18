@@ -58,7 +58,7 @@ html {
 
 	@include transition(background);
 	svg {
-		stroke: var(--color-sixth);
+		stroke: var(--color-fifth);
 		fill: none;
 
 		@include transition(stroke);
@@ -68,7 +68,7 @@ html {
 	}
 	&:hover {
 		color: var(--color-fourth);
-		background: var(--color-sixth);
+		background: var(--color-fifth);
 		svg {
 			stroke: var(--color-fourth);
 		}
@@ -91,7 +91,7 @@ html {
 #tab2:checked ~ .dashboard__header .dashboard__tab--title:nth-of-type(2),
 #tab3:checked ~ .dashboard__header .dashboard__tab--title:nth-of-type(3) {
 	color: var(--color-fourth);
-	background: var(--color-sixth);
+	background: var(--color-fifth);
 	svg {
 		stroke: var(--color-fourth);
 	}
@@ -129,6 +129,13 @@ html {
 			grid-column: span 2;
 		}
 	}
+	&--ki {
+		.card__content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 }
 
 .card {
@@ -160,7 +167,7 @@ html {
 	&__icon {
 		cursor: pointer;
 		svg {
-			stroke: #616e85;
+			stroke: var(--color-secondary);
 			fill: none;
 			opacity: 0.64;
 		}
@@ -201,5 +208,52 @@ html {
 	}
 	&__list--link {
 		color: var(--color-secondary);
+	}
+}
+
+.chart__doughnut--ki {
+	display: flex;
+	position: relative;
+	width: 132px;
+	aspect-ratio: 1;
+	align-items: center;
+}
+
+.chart__ki {
+	&--inner,
+	&--outer {
+		position: absolute;
+		inset: 0;
+		transform: rotate(-105deg);
+		.tick {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 2px;
+			background: var(--color-six);
+		}
+	}
+	&--outer {
+		.tick {
+			height: 16px;
+			transform-origin: 50% 66px;
+		}
+	}
+	&--inner {
+		top: -14px;
+		left: 51px;
+		.tick {
+			height: 2px;
+			transform-origin: 50% 46px;
+		}
+	}
+	&--numbers {
+		display: flex;
+		width: 100%;
+		padding: 0 5px 0 10px;
+		font-size: to-rem($fs-xxs);
+		color: var(--color-secondary);
+		justify-content: space-between;
+		margin-top: 57px;
 	}
 }

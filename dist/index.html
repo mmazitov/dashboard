@@ -77,7 +77,7 @@
 						</article>
 
 						<!-- KI Card -->
-						<article class="dashboard__card dashboard__card--small">
+						<article class="dashboard__card dashboard__card--small dashboard__card--ki" aria-label="KI chart">
 							<div class="card__header">
 								<h2 class="card__title--uppercase card__title">KI</h2>
 								<span class="card__icon">
@@ -87,7 +87,16 @@
 								</span>
 								<span class="card__helper"> Help text </span>
 							</div>
-							<div class="card__content"></div>
+							<div class="card__content">
+								<div class="chart__doughnut--ki">
+									<div class="chart__ki--outer"></div>
+									<div class="chart__ki--inner"></div>
+									<div class="chart__ki--numbers">
+										<span>0</span>
+										<span>100</span>
+									</div>
+								</div>
+							</div>
 						</article>
 
 						<!-- MZI Card -->
@@ -102,7 +111,7 @@
 								<span class="card__helper"> Help text </span>
 							</div>
 							<div class="card__content">
-								<canvas id="chart__doughnut--mzi" height="106"></canvas>
+								<canvas id="chart__doughnut--mzi" height="112"></canvas>
 							</div>
 						</article>
 
@@ -147,7 +156,7 @@
 								<span class="card__helper"> Help text </span>
 							</div>
 							<div class="card__content">
-								<canvas id="chart__bar--survey" height="156"></canvas>
+								<canvas id="chart__bar--survey" height="176"></canvas>
 							</div>
 						</article>
 
@@ -163,7 +172,7 @@
 								<span class="card__helper"> Help textHelp textHelp textHelp textHelp textHelp text </span>
 							</div>
 							<div class="card__content">
-								<canvas id="chart__bar--kp" height="188"></canvas>
+								<canvas id="chart__bar--kp" height="208"></canvas>
 							</div>
 						</article>
 

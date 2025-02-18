@@ -60,7 +60,6 @@ const getRLQData = () => ({
 
 // Get options for RLQ chart
 const getRLQOptions = () => ({
-	responsive: false,
 	plugins: {
 		legend: { display: false },
 		annotation: {
@@ -112,13 +111,22 @@ const styleChartArea = (ctx, borderRadius, backgroundColor, height) => {
 	ctx.height = height;
 };
 
-// Initialize MZI chart
+// Initialize MZI chart with adjusted height
 const initChartMZI = () => {
 	const ctx = document.getElementById("chart__doughnut--mzi");
 	if (!ctx) return;
 	const data = getMZIData();
 	const options = getMZIOptions();
 	createChart(ctx, "doughnut", data, options, [drawIconsPlugin()]);
+	adjustChartHeight(ctx, 10);
+};
+
+// Adjust the chart height based on the container's height
+const adjustChartHeight = (ctx, adjustment) => {
+	const container = ctx.parentElement;
+	if (!container) return;
+	const containerHeight = container.clientHeight;
+	ctx.height = containerHeight + adjustment;
 };
 
 // Get data for MZI chart
@@ -143,6 +151,11 @@ const getMZIOptions = () => ({
 	circumference: 220,
 	rotation: 250,
 	responsive: false,
+	layout: {
+		padding: {
+			top: 3,
+		},
+	},
 	plugins: {
 		legend: { display: false },
 		tooltip: { enabled: false },
@@ -219,7 +232,7 @@ const getSurveyData = () => ({
 	labels: Array.from({ length: 12 }, (_, i) => String.fromCharCode(65 + i)),
 	datasets: [
 		{
-			data: [4.5, 1.8, 2.3, 4.5, 1.3, 4.5, 4.5, 1.9, 2.3, 4.5, 1.3, 4.5],
+			data: [4.3, 1.8, 2.3, 4.3, 1.3, 4.3, 4.3, 1.9, 2.3, 4.3, 1.3, 4.3],
 			backgroundColor: ["rgba(241, 140, 92, 1)"],
 			borderWidth: 0,
 			barThickness: 15,
@@ -301,6 +314,11 @@ const getKPOptions = () => ({
 			},
 		},
 	},
+	layout: {
+		margin: {
+			bottom: 5, // Add padding before the legend
+		},
+	},
 	scales: {
 		y: {
 			beginAtZero: true,
@@ -349,42 +367,31 @@ const generateLegendLabels = (chart) => {
 
 // Initialize KI chart
 const initChartKI = () => {
-	const ctx = document.getElementById("chart__doughnut--ki");
-	if (!ctx) return;
-	const data = getKIData();
-	const options = getKIOptions();
-	createChart(ctx, "doughnut", data, options);
+	const container = document.querySelector(".chart__doughnut--ki");
+	const inner = container.querySelector(".chart__ki--outer");
+	const outer = container.querySelector(".chart__ki--inner");
+
+	const totalDegrees = 210;
+	// Outer circle with 40 ticks
+	const numberOfTicksOuter = 40;
+
+	const degreesPerTickOuter = totalDegrees / (numberOfTicksOuter - 1);
+
+	for (let i = 0; i < numberOfTicksOuter; i++) {
+		const tick = document.createElement("div");
+		tick.className = "tick";
+		tick.style.transform = `rotate(${i * degreesPerTickOuter}deg)`;
+		outer.appendChild(tick);
+	}
+
+	// Inner circle with 46 ticks
+	const numberOfTicksInner = 46;
+	const degreesPerTickInner = totalDegrees / (numberOfTicksInner - 1);
+
+	for (let i = 0; i < numberOfTicksInner; i++) {
+		const tick = document.createElement("div");
+		tick.className = "tick";
+		tick.style.transform = `rotate(${i * degreesPerTickInner}deg)`;
+		inner.appendChild(tick);
+	}
 };
-
-// Get data for KI chart
-const getKIData = () => ({
-	datasets: [
-		{
-			data: Array(40).fill(2.5),
-			backgroundColor: ["#000"],
-			borderWidth: 3,
-			borderColor: "white",
-			radius: "100%",
-			cutout: "80%",
-		},
-		{
-			data: Array(46).fill(2.173913043478261),
-			backgroundColor: ["#4caf50"],
-			borderWidth: 3,
-			borderColor: "white",
-			radius: "95%",
-			cutout: "80%",
-		},
-	],
-});
-
-// Get options for KI chart
-const getKIOptions = () => ({
-	circumference: 220,
-	rotation: 250,
-	responsive: false,
-	plugins: {
-		legend: { display: false },
-		tooltip: { enabled: false },
-	},
-});

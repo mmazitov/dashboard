@@ -12,7 +12,7 @@ body {
 	font-family: $main-font;
 	font-size: to-rem($fs-md);
 	line-height: 1;
-	background: var(--color-fifteenth);
+	background: var(--color-seven);
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -91,10 +91,8 @@ ol {
 
 blockquote {
 	margin: 0 0 5px;
-
-	// color: var(--color-secondary);
-
-	// border-left: $border-width solid var(--color-third);
+	color: var(--color-secondary);
+	border-left: 5px solid var(--color-tertiary);
 	font-style: italic;
 	padding-left: 5px;
 }
@@ -104,8 +102,7 @@ pre {
 	padding: 2px 4px;
 	font-family: "Courier New", Courier, monospace;
 	font-size: to-rem($fs-sm);
-
-	// background-color: var(--color-secondary);
+	background-color: var(--color-secondary);
 }
 
 img {

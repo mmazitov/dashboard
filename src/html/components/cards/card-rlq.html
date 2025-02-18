@@ -1,5 +1,5 @@
 <!-- RLQ Card -->
-<article class="dashboard__card dashboard__card--small">
+<article class="dashboard__card dashboard__card--small" aria-label="RLQ chart">
 	<div class="card__header">
 		<h2 class="card__title--uppercase card__title">RLQ</h2>
 		<span class="card__icon">
@@ -10,6 +10,13 @@
 		<span class="card__helper"> Help text </span>
 	</div>
 	<div class="card__content">
+		<p class="card__value"><strong>59,47</strong><span>%</span></p>
+		<p class="card__users">
+			<svg width="16" height="16">
+				<use xlink:href="pic/sprite.svg#icon-users"></use>
+			</svg>
+			56 884
+		</p>
 		<canvas id="chart__area" height="144"></canvas>
 	</div>
 </article>

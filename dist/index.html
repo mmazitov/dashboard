@@ -22,26 +22,28 @@
 		<input type="radio" name="tabs" id="tab1" hidden />
 		<input type="radio" name="tabs" id="tab2" checked hidden />
 		<input type="radio" name="tabs" id="tab3" hidden />
-		<header class="dashboard__header">
+		<header class="dashboard__header" aria-label="Dashboard header">
 			<div class="container">
-				<div class="dashboard__title--holder">
-					<h1 class="dashboard__title">Dashboard intro title</h1>
-					<p class="dashboard__description">Ac vulputate purus semper fusce at. Non dolor in cras.</p>
+				<div class="dashboard__title--holder" aria-label="Dashboard">
+					<h1 class="dashboard__title" aria-label="Dashboard intro title">Dashboard intro title</h1>
+					<p class="dashboard__description" aria-label="Ac vulputate purus semper fusce at. Non dolor in cras">
+						Ac vulputate purus semper fusce at. Non dolor in cras.
+					</p>
 				</div>
-				<div class="dashboard__tabs--title">
-					<label for="tab1" class="dashboard__tab--title">
+				<div class="dashboard__tabs--title" aria-label="Dashboard tabs">
+					<label for="tab1" class="dashboard__tab--title" aria-label="Compare">
 						<svg width="16" height="16">
 							<use xlink:href="pic/sprite.svg#icon-bar-chart"></use>
 						</svg>
 						<span> Compare</span>
 					</label>
-					<label for="tab2" class="dashboard__tab--title">
+					<label for="tab2" class="dashboard__tab--title" aria-label="Managers">
 						<svg width="16" height="16">
 							<use xlink:href="pic/sprite.svg#icon-briefcase"></use>
 						</svg>
 						<span> Managers</span>
 					</label>
-					<label for="tab3" class="dashboard__tab--title">
+					<label for="tab3" class="dashboard__tab--title" aria-label="Employees">
 						<svg width="16" height="16">
 							<use xlink:href="pic/sprite.svg#icon-user"></use>
 						</svg>
@@ -51,17 +53,17 @@
 
 			</div>
 		</header>
-		<section class="dashboard__tabs--content">
+		<section class="dashboard__tabs--content" aria-label="Dashboard tabs content">
 			<div class="container">
-				<section class="dashboard__tab--content">
+				<section class="dashboard__tab--content" aria-label="Tab 1">
 					<h2>Tab 1</h2>
 					<p>Content for tab 1</p>
 				</section>
 
-				<section class="dashboard__tab--content">
+				<section class="dashboard__tab--content" aria-label="Tab 2">
 					<section class="dashboard__charts">
 						<!-- RLQ Card -->
-						<article class="dashboard__card dashboard__card--small">
+						<article class="dashboard__card dashboard__card--small" aria-label="RLQ chart">
 							<div class="card__header">
 								<h2 class="card__title--uppercase card__title">RLQ</h2>
 								<span class="card__icon">
@@ -72,6 +74,13 @@
 								<span class="card__helper"> Help text </span>
 							</div>
 							<div class="card__content">
+								<p class="card__value"><strong>59,47</strong><span>%</span></p>
+								<p class="card__users">
+									<svg width="16" height="16">
+										<use xlink:href="pic/sprite.svg#icon-users"></use>
+									</svg>
+									56 884
+								</p>
 								<canvas id="chart__area" height="144"></canvas>
 							</div>
 						</article>
@@ -100,7 +109,7 @@
 						</article>
 
 						<!-- MZI Card -->
-						<article class="dashboard__card dashboard__card--small">
+						<article class="dashboard__card dashboard__card--small" aria-label="MZI chart">
 							<div class="card__header">
 								<h2 class="card__title--uppercase card__title">MZI</h2>
 								<span class="card__icon">
@@ -116,7 +125,7 @@
 						</article>
 
 						<!-- Survey Topics Card -->
-						<article class="dashboard__card--survey-topics dashboard__card dashboard__card--small">
+						<article class="dashboard__card--survey-topics dashboard__card dashboard__card--small" aria-label="Survey Topics">
 							<div class="card__header">
 								<h2 class="card__title--capitalize card__title">Survey Topics</h2>
 							</div>
@@ -145,7 +154,7 @@
 						</article>
 
 						<!-- Survey Topics Scores - Large Card -->
-						<article class="dashboard__card dashboard__card--large">
+						<article class="dashboard__card dashboard__card--large" aria-label="Survey score chart">
 							<div class="card__header">
 								<h2 class="card__title--capitalize card__title">Survey Topics Scores</h2>
 								<span class="card__icon">
@@ -161,7 +170,7 @@
 						</article>
 
 						<!-- KPs - Large Card -->
-						<article class="dashboard__card dashboard__card--large">
+						<article class="dashboard__card dashboard__card--large" aria-label="KP chart">
 							<div class="card__header">
 								<h2 class="card__title">KPs</h2>
 								<span class="card__icon">
@@ -179,7 +188,7 @@
 					</section>
 				</section>
 
-				<section class="dashboard__tab--content">
+				<section class="dashboard__tab--content" aria-label="Tab 3">
 					<h2>Tab 3</h2>
 					<p>Content for tab 3</p>
 				</section>

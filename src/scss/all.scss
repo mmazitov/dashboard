@@ -178,7 +178,9 @@ html {
 			}
 		}
 	}
-
+	&__content {
+		position: relative;
+	}
 	&__title--capitalize {
 		text-transform: capitalize;
 	}
@@ -208,6 +210,33 @@ html {
 	}
 	&__list--link {
 		color: var(--color-secondary);
+	}
+	&__value,
+	&__users {
+		position: absolute;
+		bottom: 11px;
+		margin: 0;
+		color: var(--color-fourth);
+	}
+	&__value {
+		left: 26px;
+		strong {
+			font-size: to-rem($fs-lgx);
+		}
+		span {
+			font-size: to-rem($fs-sm);
+		}
+	}
+	&__users {
+		display: flex;
+		right: 22px;
+		font-size: to-rem($fs-sm);
+		align-items: center;
+		gap: 4px;
+		svg {
+			stroke: var(--color-fourth);
+			fill: none;
+		}
 	}
 }
 
